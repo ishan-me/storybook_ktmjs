@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
 
+import ToDoList from './components/ToDoList';
+
 function App() {
   return (
     <div className="App">
-      <h4>
-        Checkout building component with command: <b>yarn storybook</b>
-      </h4>
+      <h2>React Todolist with Storybook in Action</h2>
+      <ToDoList />
     </div>
   );
 }
