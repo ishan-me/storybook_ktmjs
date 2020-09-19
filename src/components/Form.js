@@ -1,11 +1,11 @@
 import React from "react";
 
-const Form = ({ inputValue, setInputValue, handleSubmit }) => {
+const Form = ({ inputValue, setValue, handleSubmit }) => {
   return (
     <div className="form">
       <input
         value={inputValue}
-        onChange={e => setInputValue(e.target.value)}
+        onChange={e => setValue(e.target.value)}
         className="input"
         placeholder={"Type here..."}
       />
