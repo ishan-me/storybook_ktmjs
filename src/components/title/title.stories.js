@@ -4,6 +4,13 @@ import Title from './title';
 export default {
   title: 'Typography/Headings',
   component: Title,
+  parameters: {
+    design: {
+      type: 'figma',
+      url:
+        'https://www.figma.com/file/8Wxje0Kse1SEVZLrw8ZS39/Design-Elements-KTMJS?node-id=0%3A1',
+    },
+  },
 };
 
 export const Headingone = () => (
