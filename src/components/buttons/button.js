@@ -7,7 +7,7 @@ import './button.css';
 const Button = ({ variant = 'primary', children, href, onClick, ...rest }) => {
   if (!href)
     return (
-      <button className={`button ${variant}`} {...rest} onClick={onClick}>
+      <button className={`button ${variant}`} {...rest } onClick={onClick}>
         {children}
       </button>
     );

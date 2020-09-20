@@ -30,21 +30,25 @@ export const Secondary = () => (
     Secondary
   </Button>
 );
+
 export const Tertiary = () => (
   <Button onClick={action('clicked')} variant="tertiary">
     Tertiary
   </Button>
 );
+
 export const Success = () => (
   <Button onClick={action('clicked')} variant="success">
     Success
   </Button>
 );
+
 export const Warning = () => (
   <Button onClick={action('clicked')} variant="warning">
     Warning
   </Button>
 );
+
 export const Danger = () => (
   <Button onClick={action('clicked')} variant="danger">
     Danger
