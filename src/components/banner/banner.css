@@ -1,0 +1,12 @@
+.bannerWrapper {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding: 70px 0px;
+  border-radius: 5px;
+  width: 100%;
+  object-fit: cover;
+  background-image: url(../../assets/pattern.jpg);
+}

@@ -1,6 +1,11 @@
 .Headingone {
   font-size: 40px;
 }
+.Headingonewhite {
+  font-size: 40px;
+  color: #ffffff;
+}
+
 .Headingtwo {
   font-size: 28px;
 }

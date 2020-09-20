@@ -1,7 +1,7 @@
 import React from 'react';
 import './title.css';
 
-function Title({ variant = 'bigHeading', children, ...rest }) {
+function Title({ variant = 'Headingone', children, ...rest }) {
   return (
     <h1 className={`${variant}`} {...rest}>
       {children}
