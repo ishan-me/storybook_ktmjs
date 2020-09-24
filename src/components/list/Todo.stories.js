@@ -13,7 +13,7 @@ const Template = (args) => <Todo {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   list: {
-    id: 1,
+    id: '1',
     heading: 'We are taking a look at components in storybook',
     state: 'TODO_PENDING',
   },
@@ -22,8 +22,8 @@ Default.args = {
 export const Completed = Template.bind({});
 Completed.args = {
   list: {
-    id: 1,
-    heading: 'We are taking a look at components in storybook',
+    id: '2',
+    ...Default.args.task,
     state: 'TODO_COMPLETED',
   },
 };

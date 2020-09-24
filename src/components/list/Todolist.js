@@ -8,7 +8,7 @@ export default function TaskList({ loading, todo, finishedTask }) {
   };
 
   if (loading) {
-    return <div>loading</div>;
+    return <div>Loading ...</div>;
   }
 
   if (todo.length === 0) {
@@ -17,8 +17,8 @@ export default function TaskList({ loading, todo, finishedTask }) {
 
   return (
     <div className="list-items">
-      {todo.map((t) => (
-        <Todo key={t.id} todo={todo} {...events} />
+      {todo.map((x) => (
+        <Todo key={x.id} todo={x} {...events} />
       ))}
     </div>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Todo({ list: { id, heading, state }, finishedTask }) {
+export default function Todo({ todo: { id, heading, state }, finishedTask }) {
   return (
     <div className="todoListing">
       <input
@@ -17,10 +17,10 @@ export default function Todo({ list: { id, heading, state }, finishedTask }) {
 }
 
 Todo.propTypes = {
-  list: PropTypes.shape({
-    id: PropTypes.number.isRequired,
+  todo: PropTypes.shape({
+    id: PropTypes.string,
     heading: PropTypes.string.isRequired,
-    state: PropTypes.string.isRequired,
+    state: PropTypes.string,
   }),
   finishedTask: PropTypes.func,
 };

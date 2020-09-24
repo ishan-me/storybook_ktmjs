@@ -5,8 +5,12 @@ import * as TodoStories from './Todo.stories';
 
 export default {
   component: TodoList,
-  title: 'TodoList',
-  decorators: [(story) => <div style={{ padding: '15px' }}>{story()}</div>],
+  title: 'base/TodoList',
+  decorators: [
+    (story) => (
+      <div style={{ padding: '15px', background: 'orange' }}>{story()}</div>
+    ),
+  ],
 };
 
 const Template = (args) => <TodoList {...args} />;
@@ -16,17 +20,17 @@ Default.args = {
   todo: [
     {
       ...TodoStories.Default.args.task,
-      id: '1',
+      id: '3',
       heading: 'Need to clean the room',
     },
     {
       ...TodoStories.Default.args.task,
-      id: '2',
+      id: '4',
       heading: 'Water your pots during the day',
     },
     {
       ...TodoStories.Default.args.task,
-      id: '3',
+      id: '5',
       heading: 'Get your dog out for a walk',
     },
   ],
@@ -35,10 +39,20 @@ Default.args = {
 export const finishedTask = Template.bind({});
 finishedTask.args = {
   todo: [
-    ...Default.args.todo.slice(0, 5),
+    ...Default.args.todo.slice(0, 2),
     {
-      id: '3',
-      heading: 'This is one of the completed todo example',
+      id: '7',
+      heading: 'This is one of the completed todo example one',
+      state: 'TODO_COMPLETED',
+    },
+    {
+      id: '8',
+      heading: 'This is one of the completed todo example two',
+      state: 'TODO_COMPLETED',
+    },
+    {
+      id: '9',
+      heading: 'This is one of the completed todo example three',
       state: 'TODO_COMPLETED',
     },
   ],
