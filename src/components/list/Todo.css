@@ -1,0 +1,11 @@
+.todoListing {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffffff;
+}
+.todoListing input[type='text'] {
+  width: 100%;
+}
+.todoListing {
+  display: flex;
+}
