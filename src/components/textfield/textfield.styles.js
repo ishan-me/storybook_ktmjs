@@ -13,6 +13,7 @@ const TextField = styled(
     validation,
     onChange,
     disabled,
+    borderRadius,
     className
   }) => {
     return (
@@ -22,6 +23,7 @@ const TextField = styled(
           type={type}
           validation={validation}
           placeholder={placeholder}
+          borderRadius={borderRadius}
           value={value}
           onChange={onChange}
           disabled={disabled}
@@ -37,7 +39,7 @@ TextField.propTypes = {
   value: PropTypes.string,
   placeholder: PropTypes.string,
   validation: PropTypes.string,
-  hintText: PropTypes.string,
+  borderRadius: PropTypes.number,
   type: PropTypes.string,
   onChange: PropTypes.func,
   disabled: PropTypes.bool,

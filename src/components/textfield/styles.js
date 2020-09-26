@@ -18,4 +18,10 @@ const StyledInput = styled.input`
   margin: 0;
 `;
 
-export { StyledInput, validation };
+const borderRadius = styled.input`
+  border-radius: ${(props) => props.size};
+`;
+
+console.log(borderRadius);
+
+export { StyledInput, validation, borderRadius };

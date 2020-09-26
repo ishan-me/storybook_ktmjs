@@ -8,6 +8,7 @@ export const Textfield = ({
   placeholder,
   disabled,
   validation,
+  borderRadius,
   onFocus,
   onBlur,
 }) => {
@@ -19,6 +20,7 @@ export const Textfield = ({
       validation={validation}
       onFocus={onFocus}
       onBlur={onBlur}
+      borderRadius={borderRadius}
     />
   );
 };
@@ -28,4 +30,5 @@ Textfield.propTypes = {
   type: PropTypes.string.isRequired,
   disabled: PropTypes.bool.isRequired,
   validation: PropTypes.string,
+  borderRadius: PropTypes.number,
 };
