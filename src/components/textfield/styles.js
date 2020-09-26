@@ -1,26 +1,21 @@
 import styled from 'styled-components';
-const Text = styled.p`
-  margin: 8px auto;
+
+const validation = styled.input`
+  border-color: ${((props) => (props.error ? 'red' : 'black'),
+  (props) => (props.warning ? 'orange' : 'black'),
+  (props) => (props.sucess ? 'green' : 'black'),
+  (props) => (props.default ? 'grey' : 'black'))};
 `;
-const Error = styled(Text)`
-  font-size: 12px;
-  color: red;
-`;
+
 const StyledInput = styled.input`
   width: 100%;
   font-size: 14px;
   padding: 6px 8px;
   border-width: 1px;
+  width: 100%;
   border-style: solid;
-  border-color: ${(props) => (props.error ? 'red' : 'black')};
+  border-color: ${validation};
   margin: 0;
 `;
 
-
-const border = styled.input`
-  border-color: ${((props) => (props.error ? 'red' : 'black'),
-  (props) => (props.warning ? 'orange' : 'black'))};
-`;
-
-
-export { Text, Error, StyledInput, border };
+export { StyledInput, validation };

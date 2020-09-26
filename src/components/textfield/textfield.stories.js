@@ -10,14 +10,13 @@ import {
   radios,
   color,
 } from '@storybook/addon-knobs';
-import { action } from '@storybook/addon-actions';
 
 const types = ['text', 'password'];
 
 const validation = {
   error: 'error',
   warning: 'warning',
-  valid: 'success',
+  success: 'success',
   default: 'default',
 };
 
@@ -27,18 +26,11 @@ export const Default = () => {
       <h3>Input component: </h3>
       <Textfield
         placeholder={text('placeholder text', 'placeholder')}
-        color={color('placeholder color', '#aaa')}
+        placeholderColor={color('placeholder color', '#aaa')}
         disabled={boolean('is disabled', false)}
         type={select('input type', types, 'text')}
-        border={number('border radius', 0, {
-          range: true,
-          min: 0,
-          max: 16,
-          step: 2,
-        })}
+        border={number('border radius', 0, { range: true, min: 0, max: 15, step: 2 })}
         validation={radios('validation', validation, 'default')}
-        onFocus={action('onFocus')}
-        onBlur={action('onBlur')}
       />
     </>
   );

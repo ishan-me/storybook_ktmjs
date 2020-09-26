@@ -8,7 +8,6 @@ export const Textfield = ({
   placeholder,
   disabled,
   validation,
-  border,
   onFocus,
   onBlur,
 }) => {
@@ -18,7 +17,6 @@ export const Textfield = ({
       placeholder={placeholder}
       disabled={disabled}
       validation={validation}
-      border={border}
       onFocus={onFocus}
       onBlur={onBlur}
     />
@@ -29,4 +27,5 @@ Textfield.propTypes = {
   placeholder: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   disabled: PropTypes.bool.isRequired,
+  validation: PropTypes.string,
 };
