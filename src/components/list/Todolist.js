@@ -8,11 +8,20 @@ export default function TaskList({ loading, todo, finishedTask }) {
   };
 
   if (loading) {
-    return <div>Loading ...</div>;
+    return (
+      <div>
+        <div className="spinner">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    );
   }
 
   if (todo.length === 0) {
-    return <div> you dont have any todo yet</div>;
+    return <div> Sorry, you dont have any todos </div>;
   }
 
   return (
